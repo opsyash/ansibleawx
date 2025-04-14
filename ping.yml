@@ -1,0 +1,6 @@
+- name: Verify connection to linux-nginx
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Ping the server
+      ansible.builtin.ping:
