@@ -1,0 +1,10 @@
+- name: Install NGINX
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+      when: ansible_facts['os_family'] == 'Debian'
